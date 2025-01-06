@@ -3,7 +3,7 @@ import Logo from '/image.png'
 
 export default function Navbar() {
   return (
-    <header className="w-full px-6 text-gray-700 bg-white shadow">
+    <header className="w-full px-6 text-gray-700 bg-white shadow print:hidden">
       <div className="container flex flex-col flex-wrap items-center justify-between py-2 mx-auto md:flex-row max-w-7xl">
         <div className="relative flex flex-col md:flex-row">
           <Link

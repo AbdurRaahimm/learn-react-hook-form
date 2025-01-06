@@ -131,11 +131,6 @@ export default function Form<T extends FieldValues>({
                             {option}
                           </option>
                         ))}
-                        {/* <option value="">Select your occupation</option>
-                        <option value="design">Designer</option>
-                        <option value="developer">Developer</option>
-                        <option value="testing">Tester</option>
-                        <option value="others">Others</option> */}
                       </select>
                     </label>
                     {errors[field.name] && (
