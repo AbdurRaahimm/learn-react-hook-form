@@ -5,7 +5,7 @@ export default function RootLayout() {
   return (
     <>
     <Navbar/>
-    <main>
+    <main className='py-8'>
         <Outlet/>
     </main>
     </>
