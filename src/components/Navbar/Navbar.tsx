@@ -15,31 +15,22 @@ export default function Navbar() {
               RF<span className="text-indigo-600">.</span>
             </span>
           </Link>
-          <nav className="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
-            <a
-              href="#_"
-              className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-            >
-              Home
-            </a>
-            <a
-              href="#_"
-              className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-            >
-              Features
-            </a>
-            <a
-              href="#_"
-              className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-            >
-              Pricing
-            </a>
-            <a
-              href="#_"
-              className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-            >
-              Blog
-            </a>
+          <nav className="  flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
+           {
+            menus.map(menu=>{
+              return(
+                <Link
+                key={menu.id}
+                to={menu.link}
+                className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900 capitalize"
+              >
+               {menu.name}
+              </Link>
+              )
+            })
+           }
+           
+          
           </nav>
         </div>
 
@@ -63,3 +54,16 @@ export default function Navbar() {
 }
 
 
+
+const menus = [
+  {
+    id:1,
+    name:'shopping invoice',
+    link:'/'
+  },
+  {
+    id:2,
+    name:'multi step form',
+    link:'/multi'
+  },
+]

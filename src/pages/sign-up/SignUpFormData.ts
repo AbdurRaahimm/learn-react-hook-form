@@ -34,24 +34,7 @@ export const signUpFormData = ({occupation}:Props) => {
       name: "occupation",
       label: "Occupation",
       type: "select",
-      options: [
-        {
-          key:'designer',
-          value:'Designer'
-        },
-        {
-          key:'developer',
-          value:'Developer'
-        },
-        {
-          key:'tester',
-          value:'Tester'
-        },
-        {
-          key:'others',
-          value:'Others'
-        },
-      ],
+      options: ['designer','developer','tester','others'],
       required: false,
       className: "col-span-1",
     },
@@ -104,24 +87,7 @@ export const signUpFormData = ({occupation}:Props) => {
         name: "occupation",
         label: "Occupation",
         type: "select",
-        options: [
-          {
-            key:'designer',
-            value:'Designer'
-          },
-          {
-            key:'developer',
-            value:'Developer'
-          },
-          {
-            key:'tester',
-            value:'Tester'
-          },
-          {
-            key:'others',
-            value:'Others'
-          },
-        ],
+        options: ['designer','developer','tester','others'],
         required: false,
         className: "col-span-1",
       },
