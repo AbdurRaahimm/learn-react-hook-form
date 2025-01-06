@@ -12,7 +12,7 @@ export default function StepIndicator({ currentStep, steps }: StepIndicatorProps
       {/* Steps */}
       {
         steps.map((step, index) => (
-            <div className="w-full">
+            <div key={index} className="w-full">
             <div className="flex flex-col gap-2">
               <div className="text-sm text-indigo-600">Step {index+1} </div>
               <div className="text-sm font-medium">{step}</div>
