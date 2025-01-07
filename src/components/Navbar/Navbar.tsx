@@ -66,4 +66,9 @@ const menus = [
     name:'multi step form',
     link:'/multi'
   },
+  {
+    id:3,
+    name:'Contact Management',
+    link:'/contact-management'
+  },
 ]

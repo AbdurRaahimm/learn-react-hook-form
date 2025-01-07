@@ -4,6 +4,7 @@ import SignIn from "../pages/sign-in";
 import SignUp from "../pages/sign-up";
 import HomePage from "../pages/home";
 import MultiStepForm from "../pages/multi-form";
+import ContactManagement from "../pages/contact-management";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: "multi",
         element: <MultiStepForm />,
+      },
+      {
+        path: "contact-management",
+        element: <ContactManagement />,
       },
       {
         path: "sign-in",
