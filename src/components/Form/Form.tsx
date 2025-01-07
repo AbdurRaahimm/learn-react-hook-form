@@ -3,6 +3,7 @@ import {
   UseFormRegister,
   FieldValues,
   Path,
+  FormState,
 } from "react-hook-form";
 
 export interface FormField {
@@ -21,8 +22,9 @@ interface FormProps<T extends FieldValues> {
   register: UseFormRegister<T>;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   // control?: Control<T>;
-  errors: FieldErrors<T>;
+  // errors: FieldErrors<T>;
   getValues: () => T;
+  formState: FormState<T>;
 }
 
 export default function Form<T extends FieldValues>({
@@ -30,8 +32,9 @@ export default function Form<T extends FieldValues>({
   register,
   onSubmit,
   // control,
-  errors,
+  // errors,
   getValues,
+  formState:{isSubmitting, errors}
 }: FormProps<T>) {
   return (
     <div>
@@ -187,7 +190,8 @@ export default function Form<T extends FieldValues>({
             type="submit"
             className="border border-black px-5 py-1 rounded-sm font-medium capitalize bg-black text-white cursor-pointer"
           >
-            {formData.some(field => field.name === "username") ? "Sign up" : "Sign in"}
+            {/* {isSubmitting ? "Loading..." : formData.some(field => field.name === "username") ? "Sign up" : "Sign in"} */}
+            {isSubmitting ? "Loading...":"Submit" }
           </button>
         </div>
       </form>

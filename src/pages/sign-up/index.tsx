@@ -12,7 +12,7 @@ export default function SignUp() {
     // reset,
     getValues,
     watch,
-    formState: { errors },
+    formState,
   } = useForm<SignUpFormDataType>({});
 
   const onSubmit = (data: SignUpFormDataType) => {
@@ -38,9 +38,10 @@ export default function SignUp() {
         <Form 
           register={register}
           onSubmit={handleSubmit(onSubmit)}
-          errors={errors}
+          // errors={errors}
           formData={formValue as FormField[]}
           getValues={getValues}
+          formState={formState}
         />
       </div>
     </div>

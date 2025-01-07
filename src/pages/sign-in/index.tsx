@@ -9,7 +9,7 @@ export default function SignIn() {
     handleSubmit,
     // reset,
     getValues,
-    formState: { errors },
+    formState,
   } = useForm<SignInFormDataType>({});
 
   const onSubmit = (data: SignInFormDataType) => {
@@ -25,9 +25,9 @@ export default function SignIn() {
         <Form
           register={register}
           onSubmit={handleSubmit(onSubmit)}
-          errors={errors}
           formData={signInFormData as FormField[]}
           getValues={getValues}
+          formState={formState}
         />
       </div>
     </div>
