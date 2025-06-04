@@ -1,5 +1,4 @@
 import {
-  FieldErrors,
   UseFormRegister,
   FieldValues,
   Path,

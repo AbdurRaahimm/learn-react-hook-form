@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from '/image.png'
 
 export default function Navbar() {
+  const location = useLocation();
   return (
     <header className="w-full px-6 text-gray-700 bg-white shadow print:hidden">
       <div className="container flex flex-col flex-wrap items-center justify-between py-2 mx-auto md:flex-row max-w-7xl">
@@ -22,7 +23,11 @@ export default function Navbar() {
                 <Link
                 key={menu.id}
                 to={menu.link}
-                className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900 capitalize"
+                className={`mr-5 font-medium leading-6 capitalize ${
+                  location.pathname === menu.link
+                    ? "text-indigo-600 font-semibold"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
               >
                {menu.name}
               </Link>
@@ -74,6 +79,6 @@ const menus = [
   {
     id:4,
     name:'Condition Form',
-    link:'contion-form'
+    link:'/contion-form'
   },
 ]
