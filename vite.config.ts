@@ -12,7 +12,7 @@ import tailwindcss from "@tailwindcss/vite";
 // });
 
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/learn-react-hook-form/" : "/",
+  base: command === "build" ? "/learn-react-hook-form" : "/",
   plugins: [react(), tailwindcss()],
   build: {
     outDir: "build",
